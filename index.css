@@ -1,0 +1,187 @@
+/* styles/styles.css */
+
+:root {
+  --primary-color: #0077cc;
+  --secondary-color: #005fa3;
+  --background-color: #f4f4f4;
+  --text-color: #333;
+  --white: #fff;
+  --max-width: 1200px;
+  --section-padding: 60px 20px;
+}
+
+body.dark-mode {
+  --primary-color: #222;
+  --secondary-color: #333;
+  --background-color: #121212;
+  --text-color: #f4f4f4;
+  --white: #1e1e1e;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+header {
+  background-color: var(--primary-color);
+  color: var(--white);
+  padding: 1rem 0;
+  text-align: center;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav ul li a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffee58;
+}
+
+.theme-toggle {
+  margin-top: 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+.theme-toggle button {
+  background-color: var(--white);
+  color: var(--primary-color);
+  border: 2px solid var(--primary-color);
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle button:hover {
+  background-color: var(--primary-color);
+  color: var(--white);
+}
+
+main {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: var(--section-padding);
+}
+
+.hero {
+  background: url('/images/image\ 005.jpg') center/cover no-repeat;
+  color: var(--white);
+  text-align: center;
+  padding: 120px 20px;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+#about img {
+  width: 100%;
+  max-width: 600px;
+  display: block;
+  margin: 20px auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+}
+
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+
+.gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  transition: transform 0.3s ease;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+  transform: scale(1.05);
+}
+
+form {
+  background: var(--white);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: auto;
+}
+
+form label {
+  display: block;
+  margin-top: 1rem;
+  font-weight: bold;
+}
+
+form input,
+form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-top: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+form button {
+  margin-top: 1.5rem;
+  background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: var(--secondary-color);
+}
+
+footer {
+  background: #222;
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
